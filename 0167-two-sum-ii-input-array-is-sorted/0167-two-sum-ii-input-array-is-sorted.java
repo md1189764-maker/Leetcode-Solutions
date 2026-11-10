@@ -1,0 +1,20 @@
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int n = numbers.length;
+        int i = 0;
+        int j = n-1;
+
+
+        while(i<j){
+            int Sum = numbers[i]+numbers[j];
+            if(Sum==target){
+                return new int[]{i+1,j+1};
+            }else if(Sum<target){
+                i++;
+            }else if(Sum>target){
+                j--;
+            }
+        }
+        return new int []{-1,-1};
+    }
+}
